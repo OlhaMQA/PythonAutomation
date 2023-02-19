@@ -5,19 +5,19 @@ first_name = input("please, enter your first name:\n")
 last_name = input("please, enter your last name:\n")
 full_name = first_name + " " + last_name
 
-print('\nYou are: ' + full_name)
-print('\nIn Upper register: ' + full_name.upper())
-print('\nIn Lower register: ' + full_name.lower())
-print('\nEach word capitalised: ' + full_name.title())
-print('\nFive times in a row: '+(full_name + " ")*5)
+print('You are: ' + full_name)
+print('In Upper register: ' + full_name.upper())
+print('In Lower register: ' + full_name.lower())
+print('Each word capitalised: ' + full_name.title())
+print('Five times in a row: '+(full_name + " ")*5)
 
 first_name = "   \t\n   " + first_name + "   \t\n   "
 
-print("\nUpdated name with whitespaces: " + first_name)
+print("Updated name with whitespaces: " + first_name)
 
 first_name = first_name.strip()
 
-print("\nUpdated name stripped: " + first_name)
+print("Updated name stripped: " + first_name)
 
 # Task 2
 
