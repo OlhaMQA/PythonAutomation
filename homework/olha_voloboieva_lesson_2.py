@@ -13,11 +13,11 @@ print('Five times in a row: '+(full_name + " ")*5)
 
 first_name = "   \t\n   " + first_name + "   \t\n   "
 
-print("Updated name with whitespaces: " + first_name)
+print("\nUpdated name with whitespaces: " + first_name)
 
 first_name = first_name.strip()
 
-print("Updated name stripped: " + first_name)
+print("\nUpdated name stripped: " + first_name)
 
 # Task 2
 
