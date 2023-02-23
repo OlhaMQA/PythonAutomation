@@ -43,7 +43,7 @@ ones = number % 10
 
 sum = hundreds + tens + ones
 
-if not sum % 3 and not number % 2:
+if not sum % 3 and not ones % 2:
     print(f'Число {number} ділиться на 6')
 else:
     print(f'Число {number} не ділиться на 6')
