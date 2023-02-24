@@ -2,51 +2,61 @@
 import random
 
 min = random.randrange(60)
-quater = 0
+quarter = 0
 
 if min in range(15):
-    quater = 1
+    quarter = 1
 elif min in range(15, 30):
-    quater = 2
+    quarter = 2
 elif min in range(30, 45):
-    quater = 3
+    quarter = 3
 else:
-    quater = 4
+    quarter = 4
 
-print(f'{min} is in {quater} quater')
+print(f'{min} is in {quarter} quarter')
 
 
 # Task 2
 try:
     birth_month = int(input('В якому місяці ти народився (1-12): '))
 
-    if birth_month > 0 and birth_month <= 2 or birth_month == 12:
+    if 0 < birth_month <= 2 or birth_month == 12:
         print('За вікном падав сніг.')
-    elif birth_month >=3 and birth_month <= 5:
+    elif 3 <= birth_month <= 5:
         print('Все довкола розцвітало.')
-    elif birth_month >=6 and birth_month <= 8:
+    elif 6 <= birth_month <= 8:
         print('Діти насолоджувались літніми канікулами.')
-    elif birth_month >=9 and birth_month <= 11:
+    elif 9 <= birth_month <= 11:
         print('Все довкола загоралось яскравими фарбами.')
     else:
-        print('Введи число від 1 до 12')
+        print('Тільки цілі числа від 1 до 12')
 except ValueError:
     print('Тільки цілі числа від 1 до 12')
 
 
-# Task 3
+# Task 3 - SOLUTION 1
 number = random.randint(0, 999)
 
 hundreds = number // 100
 tens = (number % 100) // 10
 ones = number % 10
 
-sum = hundreds + tens + ones
+digits_sum = hundreds + tens + ones
 
-if not sum % 3 and not ones % 2:
-    print(f'Число {number} ділиться на 6')
-else:
+if digits_sum % 3 or ones % 2:
     print(f'Число {number} не ділиться на 6')
+else:
+    print(f'Число {number} ділиться на 6')
+
+
+# Task 3 - SOLUTION 2
+number_iterable = str(random.randint(0, 999))
+digits_sum = sum([int(i) for i in number_iterable])
+
+if digits_sum % 3 or int(number_iterable[-1]) % 2:
+    print(f'Число {number_iterable} не ділиться на 6')
+else:
+    print(f'Число {number_iterable} ділиться на 6')
 
 
 # Task 4
@@ -65,13 +75,3 @@ elif x == 0 and y == 0:
     print(f'({x}, {y}) - Origin!')
 else:
     print(f'({x}, {y}) - On {"X" if x == 0 else "Y"}-axis')
-
-
-
-
-
-
-
-
-
-
