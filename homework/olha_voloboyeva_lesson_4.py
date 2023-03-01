@@ -1,4 +1,5 @@
-# Task 1. Used: lists, 'while' loops, 'for' loops, list slicing, list append, sorted().
+# Task 1.
+
 notes = []     # List to keep the future notes
 
 while True:
