@@ -15,7 +15,6 @@ def enter_side(side_name) -> float:
 
 
 # Returns True if the quadrilateral is a rectangle by the Pythagorean theorem
-# AND none of the sides equals 0
 # Otherwise returns False
 def is_rectangle(s_1, s_2, s_3, s_4) -> bool:
     d1_squared = s_1 ** 2 + s_2 ** 2
