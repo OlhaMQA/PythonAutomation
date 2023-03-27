@@ -2,7 +2,7 @@ import re
 
 
 # Task 1
-def check_string(string) -> str:           # Checks if string matches the pattern A-Za-z0-9_
+def check_string(string) -> bool:           # Checks if string matches the pattern A-Za-z0-9_
     return bool(re.fullmatch(r'\w*', string))
 
 
