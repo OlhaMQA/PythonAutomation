@@ -34,8 +34,8 @@ print(f'Tomorrow will be {tomorrow}')
 
 # Calculate exact age by birthdate
 def calculate_age(birthdate):
-    age_in_days = (datetime.datetime.today() - birthdate).days
-    birth_timestamp = datetime.datetime.timestamp(birthdate)
+    age_in_days = (datetime.datetime.today() - birthdate).days          # calculate age in days
+    birth_timestamp = datetime.datetime.timestamp(birthdate)            # find the timestamp of birthday
     return age_in_days, birth_timestamp
 
 # Demonstration of age calculation (return age and timestamp)
