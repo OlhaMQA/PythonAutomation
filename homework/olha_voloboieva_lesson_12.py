@@ -1,40 +1,45 @@
-import random
-
-# Decorator prints function name as soon as it is called
-def func_name_print(func):
-    def print_name(*args, **kwargs):
-        func(*args, **kwargs)
-        print(func.__name__)
-    return print_name
-
-# 3 functions to use the decorator on
-@func_name_print
-def add_one(number):
-    return number + 1
+import datetime
 
 
-@func_name_print
-def add_two(number):
-    return number + 2
+# Exception handling
+def division_func(a, b):
+    try:                                        # Try to divide the numbers, return the result
+        return a/b
+    except ZeroDivisionError:                   # if ZeroDivisionError is raised, return 'n/a' and print error text
+        print('Division by 0 is Not allowed')
+        return 'n/a'
 
 
-@func_name_print
-def complex_math(number_1, number_2):
-    a = ((number_1 + number_2)**4)/(number_2**number_1)
-    return a
+# Console output of exception handling
+division_func(20, 0)
 
-'''
-# call functions to demonstrate the decorator
 
-add_two(10)
-add_one(1)
-complex_math(1, 1)
-'''
+# Date calculation
+def calculate_date(date, days, boolean):
+    delta = datetime.timedelta(days=days)                # Create delta from the days
+    # Calculate new date: add delta if boolean = True, otherwise - subtract
+    new_date = date + (delta if boolean else delta*(-1))
+    return new_date                                     # Return new date
 
-# List comprehension task
 
-list_of_integers = [random.randint(1, 10) for i in range(100)]               # List of 100 elements
-count_elements = {k: list_of_integers.count(k) for k in list_of_integers}   # dictionary with each element's count
+# Date calculation demonstration
+date_today = datetime.datetime.now()
 
-print(list_of_integers)
-print(count_elements)
+yesterday = calculate_date(date_today, 1, False)
+tomorrow = calculate_date(date_today, 1, True)
+
+print(f'Yesterday was {yesterday}')
+print(f'Tomorrow will be {tomorrow}')
+
+
+# Calculate exact age by birthdate
+def calculate_age(birthdate):
+    age_in_days = (datetime.datetime.today() - birthdate).days          # calculate age in days
+    birth_timestamp = datetime.datetime.timestamp(birthdate)            # find the timestamp of birthday
+    return age_in_days, birth_timestamp
+
+# Demonstration of age calculation (return age and timestamp)
+my_age, my_birth_timestamp = calculate_age(datetime.datetime(1991, 9, 18, 9, 16, 00, 000))
+
+print(f'I\'m {my_age} days old')
+print(f'Timestamp of my birthday is {my_birth_timestamp}')
