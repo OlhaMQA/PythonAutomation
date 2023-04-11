@@ -3,8 +3,9 @@ import random
 # Decorator prints function name as soon as it is called
 def func_name_print(func):
     def print_name(*args, **kwargs):
-        func(*args, **kwargs)
+        result = func(*args, **kwargs)
         print(func.__name__)
+        return result
     return print_name
 
 # 3 functions to use the decorator on
@@ -30,6 +31,9 @@ add_two(10)
 add_one(1)
 complex_math(1, 1)
 '''
+
+test = add_two(2)
+print(test)
 
 # List comprehension task
 
