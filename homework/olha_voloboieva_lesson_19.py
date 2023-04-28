@@ -99,7 +99,7 @@ class Train:            # Class Train has wagons and location
                 print(passenger)
 
         print(f'Some people are getting on the train:')
-        for passenger in station.people_waiting:     # Let people out
+        for passenger in station.people_waiting:     # Let people in
             if not self.wagons_available():
                 new_wagon = Wagon()
                 self + new_wagon     # Add new wagon if needed
