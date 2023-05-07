@@ -12,13 +12,13 @@ def sculpture():
     return Sculpture()
 
 
-@pytest.mark.parametrize('obj', ['painting', 'sculpture'])
-def test_show(obj, request):
-    obj = request.getfixturevalue(obj)
-    seen_before = obj.seen
-    obj.show(1)
-    seen_after = obj.seen
-    assert seen_after - seen_before == 1
+@pytest.mark.painting
+@pytest.mark.parametrize('people', range(10))
+def test_show(painting, people):
+    seen_before = painting.seen
+    painting.show(people)
+    seen_after = painting.seen
+    assert seen_after - seen_before == people
 
 
 @pytest.mark.painting
