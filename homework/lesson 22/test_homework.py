@@ -138,3 +138,4 @@ def test_06_enrollment_success_message():
 
     finally:
         driver.quit()
+
