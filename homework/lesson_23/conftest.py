@@ -5,7 +5,7 @@ import pytest
 
 @pytest.fixture(scope='session')
 def driver():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     driver.maximize_window()
     driver.get('https://www.examples.com/')
     yield driver

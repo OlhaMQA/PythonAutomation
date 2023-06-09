@@ -2,15 +2,7 @@ import requests
 import json
 
 
-'''headers = {
-    "ContentType": "application/json"
-}
-
-response_example = requests.get("https://swapi.dev/api/people/5", headers=headers)
-api_json_example = response_example.json()'''
-
-
-create_product_url = 'https://api.restful-api.dev/objects'
+objects_url = 'https://api.restful-api.dev/objects'
 
 headers = {
     "content-type": "application/json"
@@ -42,13 +34,13 @@ payload_updated = json.dumps({
 
 
 
-get_a_product_by_id = requests.get(f'{create_product_url}/ff80818188764f13018877d85f51019f', headers=headers)
+get_a_product_by_id = requests.get(f'{objects_url}/ff80818188764f13018877d85f51019f', headers=headers)
 print(get_a_product_by_id.json())
-update_product = requests.put(f'{create_product_url}/ff80818188764f13018877d85f51019f', headers=headers, data=payload_updated)
+update_product = requests.put(f'{objects_url}/ff80818188764f13018877d85f51019f', headers=headers, data=payload_updated)
 print(update_product.json())
-get_a_product_by_id = requests.get(f'{create_product_url}/ff80818188764f13018877d85f51019f', headers=headers)
+get_a_product_by_id = requests.get(f'{objects_url}/ff80818188764f13018877d85f51019f', headers=headers)
 print(get_a_product_by_id.json())
 
-delete_product = requests.delete(f'{create_product_url}/ff80818188764f13018877d85f51019f', headers=headers)
-get_a_product_by_id = requests.get(f'{create_product_url}/ff80818188764f13018877d85f51019f', headers=headers)
+delete_product = requests.delete(f'{objects_url}/ff80818188764f13018877d85f51019f', headers=headers)
+get_a_product_by_id = requests.get(f'{objects_url}/ff80818188764f13018877d85f51019f', headers=headers)
 print(get_a_product_by_id.json())

@@ -3,7 +3,7 @@ import time
 
 
 def test_01_check_phone():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     try:
         driver.maximize_window()
         driver.get('https://online.ithillel.ua/')
@@ -19,7 +19,7 @@ def test_01_check_phone():
 
 
 def test_02_check_email():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     try:
         driver.maximize_window()
         driver.get('https://online.ithillel.ua/')
@@ -35,7 +35,7 @@ def test_02_check_email():
 
 
 def test_03_enroll_form_open():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     try:
         driver.maximize_window()
         driver.get('https://online.ithillel.ua/')
@@ -49,7 +49,7 @@ def test_03_enroll_form_open():
 
 
 def test_04_enroll_form_empty_submit_button():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     try:
         driver.maximize_window()
         driver.get('https://online.ithillel.ua/')
@@ -63,7 +63,7 @@ def test_04_enroll_form_empty_submit_button():
 
 
 def test_05_enroll_form_populated_submit_button():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     try:
         driver.maximize_window()
         driver.get('https://online.ithillel.ua/')
@@ -100,7 +100,7 @@ def test_05_enroll_form_populated_submit_button():
 
 
 def test_06_enrollment_success_message():
-    driver = Chrome('homework/lesson 22/drivers/chromedriver.exe')
+    driver = Chrome('homework/lesson_22/drivers/chromedriver.exe')
     try:
         driver.maximize_window()
         driver.get('https://online.ithillel.ua/')
